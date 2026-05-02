@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Detail – Nasi Mandhi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="page-bg">
+    <div class="page-bg__pattern"></div>
+  </div>
+
+  <div class="modal-overlay">
+    <article class="modal-card">
+
+      <!-- LEFT COL / TOP ON MOBILE: Image -->
+      <div class="modal-card__media">
+        <img
+          class="modal-card__image"
+          src="../assets/ayam-oven-5.png"
+          alt="Mandi Ayam Oven"
+        />
+        <div class="modal-card__media-scrim"></div>
+
+        <div class="modal-card__media-controls">
+          <button class="modal-card__ctrl-btn" aria-label="Kembali">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="modal-card__ctrl-group">
+            <button class="modal-card__ctrl-btn modal-card__ctrl-btn--heart" aria-label="Simpan">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button class="modal-card__ctrl-btn" aria-label="Tutup">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-card__rating">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="#F59E0B"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>4.8</span>
+          <span class="modal-card__rating-sep">·</span>
+          <span class="modal-card__rating-count">248 ulasan</span>
+        </div>
+
+        <!-- Desktop-only: product name overlaid on image bottom -->
+        <div class="modal-card__media-caption">
+          <p class="modal-card__caption-tag">Paket Personal</p>
+          <h1 class="modal-card__caption-name">Mandi Ayam Oven</h1>
+        </div>
+      </div>
+
+      <!-- RIGHT COL / BOTTOM ON MOBILE: Scrollable content -->
+      <div class="modal-card__panel">
+        <div class="modal-card__scroll-area">
+
+          <!-- Product header (mobile only – desktop has caption on image) -->
+          <div class="modal-card__header">
+            <div class="modal-card__header-main">
+              <h1 class="modal-card__name">Ayam Oven</h1>
+              <span class="modal-card__price">Rp 75.000</span>
+            </div>
+            <p class="modal-card__desc">3 Porsi Nasi Mandhi • 3 Porsi Kambing</p>
+            <div class="modal-card__meta">
+              <span class="modal-card__meta-chip">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                35–45 menit
+              </span>
+              <span class="modal-card__meta-chip">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+                Porsi 3 Orang
+              </span>
+              <span class="modal-card__meta-chip modal-card__meta-chip--halal">Halal</span>
+            </div>
+          </div>
+
+          <div class="modal-card__rule"></div>
+
+          <!-- Extra Toppings -->
+          <section class="modal-card__section">
+            <div class="modal-card__section-head">
+              <h2 class="modal-card__section-title">Extra Toppings</h2>
+              <span class="modal-card__pill modal-card__pill--muted">Opsional</span>
+            </div>
+            <div class="modal-card__options">
+
+              <label class="option option--checkbox">
+                <input class="option__input" type="checkbox" name="topping" value="kismis" />
+                <span class="option__box"></span>
+                <span class="option__label">Nasi + Sambal</span>
+                <span class="option__price">+ Rp 12.000</span>
+              </label>
+
+              <label class="option option--checkbox">
+                <input class="option__input" type="checkbox" name="topping" value="telur" />
+                <span class="option__box"></span>
+                <span class="option__label">Ayam Oven</span>
+                <span class="option__price">+ Rp 15.000</span>
+              </label>
+
+              <label class="option option--checkbox">
+                <input class="option__input" type="checkbox" name="topping" value="telur" />
+                <span class="option__box"></span>
+                <span class="option__label">Kabab  Sapi</span>
+                <span class="option__price">+ Rp 19.000</span>
+              </label>
+
+              <label class="option option--checkbox">
+                <input class="option__input" type="checkbox" name="topping" value="sambal" />
+                <span class="option__box"></span>
+                <span class="option__label">Sambal Extra</span>
+                <span class="option__price">+ Rp 3.000</span>
+              </label>
+
+            </div>
+          </section>
+
+          <div class="modal-card__rule"></div>
+
+          <div class="modal-card__rule"></div>
+
+          <!-- Add Note -->
+          <section class="modal-card__section modal-card__section--last">
+            <h2 class="modal-card__section-title">Catatan</h2>
+            <textarea class="modal-card__note" placeholder="Contoh: Tanpa bawang, tambah sendok…" rows="3"></textarea>
+          </section>
+
+        </div><!-- /scroll-area -->
+
+        <!-- Footer: sticky on mobile, inline on desktop -->
+        <footer class="modal-card__footer">
+          <div class="modal-card__qty-group">
+            <span class="modal-card__qty-label">Jumlah</span>
+            <div class="modal-card__qty">
+              <button class="modal-card__qty-btn" aria-label="Kurang">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <span class="modal-card__qty-val">1</span>
+              <button class="modal-card__qty-btn modal-card__qty-btn--plus" aria-label="Tambah">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <button class="modal-card__cta">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            Tambah ke Keranjang
+            <span class="modal-card__cta-price">Rp 75.000</span>
+          </button>
+        </footer>
+
+      </div><!-- /panel -->
+    </article>
+  </div>
+
+</body>
+</html>
