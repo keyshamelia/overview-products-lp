@@ -250,6 +250,7 @@ textarea { font-family: var(--f-ui); }
   font-weight: 700;
   color: var(--c-dark);
   letter-spacing: -.1px;
+  margin-bottom: 12px;
 }
 
 .modal-card__pill {
