@@ -1,29 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
-   /* TOKENS */
 :root {
-  --c-cream:        #FAF8F5;
-  --c-cream-2:      #F3EDE3;
-  --c-cream-3:      #EAE0D0;
-  --c-orange:       #C2410C;
-  --c-orange-2:     #EA580C;
-  --c-orange-bg:    #FEF0E7;
-  --c-dark:         #1F2937;
-  --c-dark-2:       #374151;
-  --c-muted:        #9CA3AF;
-  --c-border:       #E5DDD0;
-  --c-white:        #FFFFFF;
-  --c-green:        #166534;
-  --c-green-bg:     #DCFCE7;
+  /* Brand */
+  --c-orange:       #C8441B;   
+  --c-orange-2:     #A33415;   
+  --c-orange-bg:    #FFF0EB;   
 
-  --f-display:      'Lora', Georgia, serif;
-  --f-ui:           'DM Sans', system-ui, sans-serif;
+  /* Backgrounds  */
+  --c-cream:        #FAF8F5;   
+  --c-cream-2:      #EDE8E1;   
+  --c-cream-3:      #EDE8E1;   
+  --c-white:        #FFFFFF;   
 
+  /* Text */
+  --c-dark:         #1A1208;   
+  --c-dark-2:       #7A6A56;   
+  --c-muted:        #B0A090;   
+
+  /* Border */
+  --c-border:       #EDE8E1;   
+
+  /* Status */
+  --c-green:        #1E7E34;   
+  --c-green-bg:     #E8F8ED;   
+
+  /* Typography */
+  --f-display:      'Playfair Display', Georgia, serif;  
+  --f-ui:           'Plus Jakarta Sans', system-ui, sans-serif; 
+
+  /* Easing */
   --ease:           cubic-bezier(.22, 1, .36, 1);
   --ease-in:        cubic-bezier(.55, 0, 1, .45);
 }
 
-   /* RESET */
+/*  RESET  */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; }
 body { font-family: var(--f-ui); background: var(--c-cream); -webkit-font-smoothing: antialiased; }
@@ -31,7 +41,7 @@ img  { display: block; width: 100%; height: 100%; object-fit: cover; }
 button { cursor: pointer; border: none; background: none; font-family: var(--f-ui); }
 textarea { font-family: var(--f-ui); }
 
-   /* DEMO PAGE BACKGROUND */
+/*  DEMO PAGE BACKGROUND  */
 .page-bg {
   position: fixed;
   inset: 0;
@@ -41,16 +51,16 @@ textarea { font-family: var(--f-ui); }
 .page-bg__pattern {
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(194,65,12,.06) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(200,68,27,.06) 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
-   /* OVERLAY */
+/*  OVERLAY  */
 .modal-overlay {
   position: fixed;
   inset: 0;
   z-index: 50;
-  background: rgba(12, 8, 4, 0.58);
+  background: rgba(26, 18, 8, 0.60);   /* darkened with --clr-text-primary tint */
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   display: flex;
@@ -64,7 +74,7 @@ textarea { font-family: var(--f-ui); }
   to   { opacity: 1; }
 }
 
-   /* MODAL CARD  –  MOBILE (single column) */
+/*  MODAL CARD — MOBILE (single column)  */
 .modal-card {
   position: relative;
   width: 100%;
@@ -75,7 +85,7 @@ textarea { font-family: var(--f-ui); }
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 -4px 48px rgba(0,0,0,.22), 0 0 0 1px rgba(0,0,0,.04);
+  box-shadow: 0 -4px 48px rgba(26,18,8,.20), 0 0 0 1px rgba(26,18,8,.04);
   animation: card-rise .42s var(--ease) .06s both;
 }
 @keyframes card-rise {
@@ -90,12 +100,12 @@ textarea { font-family: var(--f-ui); }
   top: 10px; left: 50%;
   transform: translateX(-50%);
   width: 38px; height: 4px;
-  background: rgba(0,0,0,.13);
+  background: rgba(26,18,8,.13);
   border-radius: 9px;
   z-index: 10;
 }
 
-/* ─── MEDIA (image) ─── */
+/*  MEDIA (image)  */
 .modal-card__media {
   position: relative;
   flex-shrink: 0;
@@ -110,8 +120,8 @@ textarea { font-family: var(--f-ui); }
 .modal-card__media-scrim {
   position: absolute; inset: 0;
   background:
-    linear-gradient(to bottom, rgba(0,0,0,.38) 0%, transparent 36%),
-    linear-gradient(to top,    rgba(15,8,2,.52) 0%, transparent 44%);
+    linear-gradient(to bottom, rgba(26,18,8,.36) 0%, transparent 36%),
+    linear-gradient(to top,    rgba(26,18,8,.52) 0%, transparent 44%);
   pointer-events: none;
 }
 
@@ -130,7 +140,7 @@ textarea { font-family: var(--f-ui); }
   color: var(--c-dark);
   display: flex; align-items: center; justify-content: center;
   transition: transform .16s ease, background .16s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  box-shadow: 0 2px 8px rgba(26,18,8,.12);
 }
 .modal-card__ctrl-btn:hover { transform: scale(1.08); background: var(--c-white); }
 .modal-card__ctrl-btn--heart { color: var(--c-orange); }
@@ -142,7 +152,7 @@ textarea { font-family: var(--f-ui); }
   backdrop-filter: blur(5px);
   padding: 5px 11px; border-radius: 99px;
   font-size: 12px; font-weight: 600; color: var(--c-dark);
-  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+  box-shadow: 0 2px 10px rgba(26,18,8,.10);
   z-index: 3;
 }
 .modal-card__rating-sep { color: var(--c-muted); }
@@ -151,7 +161,7 @@ textarea { font-family: var(--f-ui); }
 /* Desktop caption on image — hidden on mobile */
 .modal-card__media-caption { display: none; }
 
-/* ─── PANEL (scrollable content + footer) ─── */
+/*  PANEL (scrollable content + footer)  */
 .modal-card__panel {
   flex: 1;
   display: flex;
@@ -168,7 +178,7 @@ textarea { font-family: var(--f-ui); }
 }
 .modal-card__scroll-area::-webkit-scrollbar { display: none; }
 
-/* ─── Product header (mobile) ─── */
+/*  Product header (mobile)  */
 .modal-card__header { padding-top: 20px; }
 
 .modal-card__header-main {
@@ -187,14 +197,14 @@ textarea { font-family: var(--f-ui); }
 }
 .modal-card__price {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--c-orange);
   flex-shrink: 0;
   padding-top: 1px;
 }
 .modal-card__desc {
   font-size: 13.5px;
-  color: #6B7280;
+  color: var(--c-dark-2);          
   line-height: 1.68;
   margin-bottom: 12px;
 }
@@ -219,14 +229,14 @@ textarea { font-family: var(--f-ui); }
   color: var(--c-green);
 }
 
-/* ─── Divider ─── */
+/*  Divider  */
 .modal-card__rule {
   height: 1px;
   background: var(--c-border);
   margin: 18px 0;
 }
 
-/* ─── Section ─── */
+/*  Section  */
 .modal-card__section { margin-bottom: 4px; }
 .modal-card__section--last { margin-bottom: 0; }
 
@@ -250,17 +260,17 @@ textarea { font-family: var(--f-ui); }
   padding: 3px 9px;
   border-radius: 99px;
 }
-.modal-card__pill--muted  { background: var(--c-cream-3); color: var(--c-muted); }
-.modal-card__pill--required { background: rgba(194,65,12,.1); color: var(--c-orange); }
+.modal-card__pill--muted    { background: var(--c-cream-2); color: var(--c-muted); }
+.modal-card__pill--required { background: rgba(200,68,27,.10); color: var(--c-orange); }
 
-/* ─── Options list ─── */
+/*  Options list  */
 .modal-card__options {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-   /* OPTION ROW  (shared checkbox + radio) */
+/*  OPTION ROW (shared checkbox + radio)  */
 .option {
   display: flex;
   align-items: center;
@@ -275,8 +285,8 @@ textarea { font-family: var(--f-ui); }
   position: relative;
 }
 .option:hover {
-  border-color: rgba(194,65,12,.3);
-  background: #FFFAF8;
+  border-color: rgba(200,68,27,.30);
+  background: var(--c-orange-bg);  
 }
 
 /* Hide native */
@@ -285,7 +295,7 @@ textarea { font-family: var(--f-ui); }
   opacity: 0; width: 0; height: 0; pointer-events: none;
 }
 
-/* ── Checkbox indicator ── */
+/* Checkbox indicator */
 .option__box {
   width: 20px; height: 20px;
   border-radius: 6px;
@@ -313,7 +323,7 @@ textarea { font-family: var(--f-ui); }
   transform: rotate(45deg) scale(1);
 }
 
-/* ── Radio indicator ── */
+/* Radio indicator */
 .option__dot {
   width: 20px; height: 20px;
   border-radius: 50%;
@@ -341,7 +351,7 @@ textarea { font-family: var(--f-ui); }
 .option:has(.option__input:checked) {
   border-color: var(--c-orange);
   background: var(--c-orange-bg);
-  box-shadow: 0 2px 12px rgba(194,65,12,.09);
+  box-shadow: 0 2px 12px rgba(200,68,27,.09);
 }
 
 .option__label {
@@ -353,11 +363,11 @@ textarea { font-family: var(--f-ui); }
 .option__price {
   font-size: 13px;
   font-weight: 700;
-  color: var(--c-orange-2);
+  color: var(--c-orange-2);     
 }
 .option__spice { font-size: 12px; }
 
-/* ─── Textarea ─── */
+/* Textarea */
 .modal-card__note {
   width: 100%;
   padding: 13px 15px;
@@ -374,10 +384,10 @@ textarea { font-family: var(--f-ui); }
 .modal-card__note::placeholder { color: var(--c-muted); }
 .modal-card__note:focus {
   border-color: var(--c-orange);
-  box-shadow: 0 0 0 3.5px rgba(194,65,12,.08);
+  box-shadow: 0 0 0 3.5px rgba(200,68,27,.08);
 }
 
-   /* FOOTER  –  sticky on mobile */
+/* FOOTER — sticky on mobile */
 .modal-card__footer {
   flex-shrink: 0;
   padding: 14px 20px 20px;
@@ -418,7 +428,7 @@ textarea { font-family: var(--f-ui); }
   flex-shrink: 0;
 }
 .modal-card__qty-btn:hover { background: var(--c-cream-2); color: var(--c-orange); }
-.modal-card__qty-btn:active { background: var(--c-cream-3); }
+.modal-card__qty-btn:active { background: var(--c-border); }
 .modal-card__qty-val {
   min-width: 34px;
   text-align: center;
@@ -441,7 +451,7 @@ textarea { font-family: var(--f-ui); }
   letter-spacing: .1px;
   display: flex; align-items: center; justify-content: center;
   gap: 7px;
-  box-shadow: 0 4px 18px rgba(194,65,12,.32), 0 1px 0 rgba(255,255,255,.15) inset;
+  box-shadow: 0 4px 18px rgba(200,68,27,.35), 0 1px 0 rgba(255,255,255,.15) inset;
   position: relative;
   overflow: hidden;
   transition: background .2s ease, transform .16s ease, box-shadow .2s ease;
@@ -456,13 +466,13 @@ textarea { font-family: var(--f-ui); }
 }
 .modal-card__cta:hover::before { left: 130%; }
 .modal-card__cta:hover {
-  background: #B03A0A;
+  background: var(--c-orange-2);  
   transform: translateY(-1px);
-  box-shadow: 0 7px 24px rgba(194,65,12,.38);
+  box-shadow: 0 7px 24px rgba(200,68,27,.42);
 }
 .modal-card__cta:active {
   transform: scale(.98) translateY(0);
-  box-shadow: 0 2px 10px rgba(194,65,12,.25);
+  box-shadow: 0 2px 10px rgba(200,68,27,.25);
 }
 .modal-card__cta-price {
   opacity: .82;
@@ -471,7 +481,7 @@ textarea { font-family: var(--f-ui); }
 }
 .modal-card__cta-price::before { content: '· '; }
 
-   /* DESKTOP  ≥ 1024px  –  TWO COLUMN LAYOUT */
+/* DESKTOP ≥ 1024px — TWO COLUMN LAYOUT */
 @media (min-width: 1024px) {
 
   .modal-overlay {
@@ -480,11 +490,11 @@ textarea { font-family: var(--f-ui); }
   }
 
   .modal-card {
-    flex-direction: row;         
+    flex-direction: row;
     max-width: 920px;
     width: 100%;
     max-height: 82dvh;
-    border-radius: 26px;          
+    border-radius: 26px;
     animation-name: card-scale;
   }
   @keyframes card-scale {
@@ -499,19 +509,18 @@ textarea { font-family: var(--f-ui); }
   .modal-card__media {
     width: 46%;
     flex-shrink: 0;
-    aspect-ratio: unset;          
+    aspect-ratio: unset;
     align-self: stretch;
   }
   .modal-card__image { object-position: center 30%; }
 
-  /* Scrim: right-side fade for blending into panel */
   .modal-card__media-scrim {
     background:
-      linear-gradient(to bottom, rgba(0,0,0,.38) 0%, transparent 28%),
-      linear-gradient(to top,    rgba(15,8,2,.45) 0%, transparent 50%);
+      linear-gradient(to bottom, rgba(26,18,8,.36) 0%, transparent 28%),
+      linear-gradient(to top,    rgba(26,18,8,.45) 0%, transparent 50%);
   }
 
-  /* Caption overlaid on image bottom-left (desktop only) */
+  /* Caption on image bottom-left (desktop only) */
   .modal-card__media-caption {
     display: block;
     position: absolute;
@@ -531,7 +540,7 @@ textarea { font-family: var(--f-ui); }
     font-weight: 700;
     color: #fff;
     line-height: 1.15;
-    text-shadow: 0 2px 12px rgba(0,0,0,.4);
+    text-shadow: 0 2px 12px rgba(26,18,8,.4);
     max-width: 280px;
   }
 
@@ -542,16 +551,14 @@ textarea { font-family: var(--f-ui); }
     overflow: hidden;
   }
 
-  .modal-card__scroll-area {
-    padding: 32px 30px 0;
-  }
+  .modal-card__scroll-area { padding: 32px 30px 0; }
 
-  /* Hide mobile product name block; caption on image handles it */
+  /* Hide mobile product name; caption on image handles it */
   .modal-card__header { padding-top: 0; }
-  .modal-card__header-main { display: none; }   
+  .modal-card__header-main { display: none; }
   .modal-card__desc { margin-top: 0; }
 
-  /* Footer: inline (no sticky needed, content is scrollable) */
+  /* Footer */
   .modal-card__footer {
     padding: 16px 30px 24px;
     box-shadow: none;
@@ -563,4 +570,3 @@ textarea { font-family: var(--f-ui); }
     font-size: 14px;
   }
 }
-
