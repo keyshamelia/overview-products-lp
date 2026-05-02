@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
 
-/* ─────────────────────────────────────────
-   TOKENS
-───────────────────────────────────────── */
+   /* TOKENS */
 :root {
   --c-cream:        #FAF8F5;
   --c-cream-2:      #F3EDE3;
@@ -25,9 +23,7 @@
   --ease-in:        cubic-bezier(.55, 0, 1, .45);
 }
 
-/* ─────────────────────────────────────────
-   RESET
-───────────────────────────────────────── */
+   /* RESET */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { font-size: 16px; }
 body { font-family: var(--f-ui); background: var(--c-cream); -webkit-font-smoothing: antialiased; }
@@ -35,9 +31,7 @@ img  { display: block; width: 100%; height: 100%; object-fit: cover; }
 button { cursor: pointer; border: none; background: none; font-family: var(--f-ui); }
 textarea { font-family: var(--f-ui); }
 
-/* ─────────────────────────────────────────
-   DEMO PAGE BACKGROUND
-───────────────────────────────────────── */
+   /* DEMO PAGE BACKGROUND */
 .page-bg {
   position: fixed;
   inset: 0;
@@ -51,9 +45,7 @@ textarea { font-family: var(--f-ui); }
   background-size: 28px 28px;
 }
 
-/* ─────────────────────────────────────────
-   OVERLAY
-───────────────────────────────────────── */
+   /* OVERLAY */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -72,9 +64,7 @@ textarea { font-family: var(--f-ui); }
   to   { opacity: 1; }
 }
 
-/* ─────────────────────────────────────────
-   MODAL CARD  –  MOBILE (single column)
-───────────────────────────────────────── */
+   /* MODAL CARD  –  MOBILE (single column) */
 .modal-card {
   position: relative;
   width: 100%;
@@ -270,9 +260,7 @@ textarea { font-family: var(--f-ui); }
   gap: 6px;
 }
 
-/* ─────────────────────────────────────────
-   OPTION ROW  (shared checkbox + radio)
-───────────────────────────────────────── */
+   /* OPTION ROW  (shared checkbox + radio) */
 .option {
   display: flex;
   align-items: center;
@@ -389,9 +377,7 @@ textarea { font-family: var(--f-ui); }
   box-shadow: 0 0 0 3.5px rgba(194,65,12,.08);
 }
 
-/* ─────────────────────────────────────────
-   FOOTER  –  sticky on mobile
-───────────────────────────────────────── */
+   /* FOOTER  –  sticky on mobile */
 .modal-card__footer {
   flex-shrink: 0;
   padding: 14px 20px 20px;
@@ -485,9 +471,7 @@ textarea { font-family: var(--f-ui); }
 }
 .modal-card__cta-price::before { content: '· '; }
 
-/* ─────────────────────────────────────────
-   DESKTOP  ≥ 1024px  –  TWO COLUMN LAYOUT
-───────────────────────────────────────── */
+   /* DESKTOP  ≥ 1024px  –  TWO COLUMN LAYOUT */
 @media (min-width: 1024px) {
 
   .modal-overlay {
@@ -496,11 +480,11 @@ textarea { font-family: var(--f-ui); }
   }
 
   .modal-card {
-    flex-direction: row;          /* side-by-side */
+    flex-direction: row;         
     max-width: 920px;
     width: 100%;
     max-height: 82dvh;
-    border-radius: 26px;          /* all corners rounded */
+    border-radius: 26px;          
     animation-name: card-scale;
   }
   @keyframes card-scale {
@@ -511,11 +495,11 @@ textarea { font-family: var(--f-ui); }
   /* Remove pull handle */
   .modal-card::before { display: none; }
 
-  /* ── LEFT: image fills full height ── */
+  /* LEFT: image fills full height */
   .modal-card__media {
     width: 46%;
     flex-shrink: 0;
-    aspect-ratio: unset;          /* let it stretch to card height */
+    aspect-ratio: unset;          
     align-self: stretch;
   }
   .modal-card__image { object-position: center 30%; }
@@ -551,7 +535,7 @@ textarea { font-family: var(--f-ui); }
     max-width: 280px;
   }
 
-  /* ── RIGHT: panel fills remaining width ── */
+  /* RIGHT: panel fills remaining width */
   .modal-card__panel {
     width: 54%;
     flex-direction: column;
@@ -564,7 +548,7 @@ textarea { font-family: var(--f-ui); }
 
   /* Hide mobile product name block; caption on image handles it */
   .modal-card__header { padding-top: 0; }
-  .modal-card__header-main { display: none; }   /* name shown on image */
+  .modal-card__header-main { display: none; }   
   .modal-card__desc { margin-top: 0; }
 
   /* Footer: inline (no sticky needed, content is scrollable) */
@@ -580,16 +564,3 @@ textarea { font-family: var(--f-ui); }
   }
 }
 
-/* ─────────────────────────────────────────
-   TABLET  640–1023px
-───────────────────────────────────────── */
-@media (min-width: 640px) and (max-width: 1023px) {
-  .modal-overlay { align-items: center; padding: 20px; }
-  .modal-card {
-    border-radius: 26px;
-    max-height: 88dvh;
-  }
-  .modal-card::before { display: none; }
-  .modal-card__scroll-area { padding: 0 24px; }
-  .modal-card__footer { padding: 14px 24px 20px; }
-}
